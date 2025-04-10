@@ -5,6 +5,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
+import asyncio
+
+from sqlalchemy.ext.asyncio import create_async_engine
 
 from app.config import load_config 
 from app.database.models import Base  
